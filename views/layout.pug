@@ -1,0 +1,91 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(content='width=device-width, initial-scale=1.0' name='viewport')
+  title Bitlipa Africa
+  meta(content='' name='description')
+  meta(content='' name='keywords')
+  // Favicons
+  link(href='/img/logo3.svg' rel='icon')
+  link(href='/img/logo3.svg' rel='apple-touch-icon')
+  // Google Fonts
+  link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i' rel='stylesheet')
+  // Vendor CSS Files
+  link(href='/vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet')
+  link(href='/vendor/bootstrap-icons/bootstrap-icons.css' rel='stylesheet')
+  link(href='/vendor/aos/aos.css' rel='stylesheet')
+  link(href='/vendor/remixicon/remixicon.css' rel='stylesheet')
+  link(href='/vendor/boxicons/css/boxicons.min.css' rel='stylesheet')
+  link(href='/vendor/swiper/swiper-bundle.min.css' rel='stylesheet')
+  link(href='/vendor/glightbox/css/glightbox.min.css' rel='stylesheet')
+  
+  //Main CSS File
+
+  link(href='/css/style.css' rel='stylesheet')
+
+header#header.header.fixed-top
+  .container-fluid.container-xl.d-flex.align-items-center.justify-content-between
+    a.logo.d-flex.align-items-center(href='/home')
+      img(src='/img/logo.svg' alt='')
+    
+
+    nav#navbar.navbar
+      ul
+        li
+          a.nav-link.scrollto.active(href='/home') Home
+        li
+          a.nav-link.scrollto(href='/team') Team
+        li
+          a.nav-link.scrollto(href='/security') Security
+        li
+          a.nav-link.scrollto(href='/help') Help
+        li
+          a.nav-link.scrollto(href='/Resources') Resources
+        //- li
+        //-   a(href='blog.html') Blog
+        li
+          a.nav-link.scrollto(href='/Status') Status
+        //- li
+        //-   a.getstarted.scrollto(href='#about') Get Started
+      i.bi.bi-list.mobile-nav-toggle
+
+
+    // .navbar
+    // End Header
+    nav#navbar2.navbar2.navbar.fixed-bottom.d-flex.align-items-center.justify-content-between
+        .navbar-header
+          //- a.navbar-brand(href='#') WebSiteName
+          a#banner.navbar-brand(href='https://play.google.com/store/apps/details?id=com.app.bitlipa&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'  )
+                img(alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png')
+        ul
+          li
+            a.nav-link.scroll-to(href='#')
+              span.bx.bxl-telegram.bx-sm
+          
+          li
+            a.nav-link.scroll-to(href='#')
+              span.bx.bxl-twitter.bx-sm
+
+          li
+            a.nav-link.scroll-to(href='#')
+              span.bx.bxl-discord.bx-sm
+             
+        
+          
+
+
+block content
+// End Footer
+a.back-to-top.d-flex.align-items-center.justify-content-center(href='#')
+  i.bi.bi-arrow-up-short
+// Vendor JS Files
+script(src='/vendor/bootstrap/js/bootstrap.bundle.js')
+script(src='/vendor/aos/aos.js')
+script(src='/vendor/php-email-form/validate.js')
+script(src='/vendor/swiper/swiper-bundle.min.js')
+script(src='/vendor/purecounter/purecounter.js')
+script(src='/vendor/isotope-layout/isotope.pkgd.min.js')
+script(src='/vendor/glightbox/js/glightbox.min.js')
+// Template Main JS File
+script(src='/js/main.js')
+
