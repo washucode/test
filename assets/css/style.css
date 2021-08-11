@@ -205,9 +205,14 @@ section {
 #banner img{
   width: 38%;
 }
-#navbar2 li img{
+#navbar2 li span{
   width:5%;
-  color:white;
+  color:#75C8AE;
+}
+
+#navbar2 li span{
+  width:5%;
+  color:#75C8AE;
 }
 .navbar.nav-scrolled ul li a,.navbar2.nav-scrolled span{
    color:#00343D;
@@ -422,7 +427,7 @@ section {
 }
 
 .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
-  color: #4154f1;
+  color: #75C8AE;
 }
 
 .navbar-mobile .dropdown > .dropdown-active {
@@ -430,35 +435,55 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Home Section
+--------------------------------------------------------------*/
+
+.home::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgb(0,52,61);
+  background: linear-gradient(0deg, rgba(0,52,61,1) 0%, rgba(69,139,128,1) 72%, rgba(108,188,165,1) 92%, rgba(117,200,174,1) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+
+
+/*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-.hero {
+.hero,.three {
   width: 100%;
   height: 100vh;
-  background: #00343D;
   background-size: cover;
   
 }
+.three{
+  background: rgb(0,52,61);
+  background: linear-gradient(0deg, rgba(0,52,61,1) 0%, rgba(69,139,128,1) 72%, rgba(108,188,165,1) 92%, rgba(117,200,174,1) 100%);;
+}
 
-.hero h1 {
+.hero h1,.three h1 {
   margin: 0;
   font-size: 70px;
-  font-weight: 700;
-  color: #FCB83F;
-  
+  font-weight: 900;
+  color: #f6f9ff;
 }
 
-.hero h2 {
+.hero h2,.three h2 {
   color: #fafbff;
   margin: 15px 0 0 0;
-  font-size: 20px;
-  
+  font-size: 22px;
 }
 
 
 
 
-.hero .hero-img {
+.hero .hero-img,.three .three-img {
   text-align: left;
   
 }
@@ -467,105 +492,59 @@ section {
 /*--------------------------------------------------------------
 #   Section 2
 --------------------------------------------------------------*/
-.two {
+/* .two{
+  background-image: url('/home2.svg');
+} */
+
+.two,.four {
   width: 100%;
   height: 100vh;
-  background: #fafbff;
-  background-size: cover;
+  background: #fff;
+ 
 }
 
-.two h1 {
+.two h1,.four h1 {
   margin: 0;
-  font-size: 55px;
-  font-weight: 700;
-  color: #00343D;
+  font-size: 70px;
+  font-weight: 900;
+  color: #FCB83F;
 }
 
-.two h2 {
+.two h2, .four h2{
   color: #00343D;
   margin: 15px 0 0 0;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 
 
 
-.two .two-img {
+.two .two-img,.four .four-img  {
   text-align: right;
   
 }
 
-  
-
-
-/*--------------------------------------------------------------
-#   Section 3
---------------------------------------------------------------*/
-.three {
-  width: 100%;
-  height: 100vh;
-  background: #FCB83F;
-  background-size: cover;
-}
-
-.three h1 {
-  margin: 0;
-  font-size: 55px;
-  font-weight: 700;
-  color: #f6f9ff;
-}
-
-.three h2 {
-  color: #00343D;
-  margin: 0 0 0 0;
-  font-size: 20px;
-}
-
-
-
-.four {
-  width: 100%;
-  height: 100vh;
-  background: #75C8AE;
-  background-size: cover;
-}
-
-.four h1 {
-  margin: 0;
-  font-size: 55px;
-  font-weight: 700;
-  color: #00343D;
-}
-
-.four h2 {
-  color: #00343D;
-  margin: 0 0 0 0;
-  font-size: 20px;
-}
-
-
-
-
-.three .three-img {
-  text-align: left;
-  
-}
 
 
 #home1{
   width:100%;
-  height:120%;
+  height:100vh;
 }
 #home2{
   width:100%;
+  height:100%;
+  
+  
  
 }
 #home3{
   width:100%;
+  height:120%;
   
 }
 #home4{
   width:100%;
+  height:120%;
  
 }
 

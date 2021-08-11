@@ -82,17 +82,22 @@
     onscroll(document, headerScrolled)
   }
 
-  
   let selectNav = select('.navbar')
-  let selectNav2 = select('.navbar2')
+  // let selectNav2 = select('.navbar2')
+  let section2 = select("#two").offsetTop-100
+  let section3 = select("#three").offsetTop-100 
+  console.log(section3)
   if (selectNav) {
     
     const scrolled = () => {
-      if (window.scrollY >= select("#two").offsetTop-100) {
-        selectNav.classList.add('nav-scrolled');
-        selectNav2.classList.add('nav-scrolled');
+      if (window.scrollY >  section2) {
+       
         
-      } else {
+        selectNav.classList.add('nav-scrolled');
+        // selectNav2.classList.add('nav-scrolled');
+        
+      }
+      else {
         selectNav.classList.remove('nav-scrolled');
         selectNav2.classList.remove('nav-scrolled');
         
