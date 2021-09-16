@@ -2,6 +2,7 @@
   "name": "bitlipaweb",
   "version": "0.0.0",
   "private": true,
+  "main":"functions/server.js",
   "scripts": {
     "build": "netlify-lambda build express",
     "start": "nodemon app.js",

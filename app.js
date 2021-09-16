@@ -19,10 +19,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 
-// app.get('/', (req, res) => {
-//   res.render('index');
+app.get('/', (req, res) => {
+  res.render('index');
   
-// });
+});
 
 
 app.use(logger('dev'));
@@ -40,9 +40,6 @@ app.use(function(req, res, next) {
 
 });
 
-app.listen(port, function () {
-  console.log(`Example app listening on port ${port}!`);
-});
 
 
 // error handler
@@ -59,4 +56,9 @@ app.use(function(err, req, res, next) {
 });
 
 
-module.exports = app;
+app.listen(port, function () {
+  console.log(`App listening on port ${port}!`);
+});
+
+
+// module.exports = app;
