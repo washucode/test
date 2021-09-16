@@ -8,7 +8,7 @@ const router = express.Router();
 
 // Link to views folder.
 let views = path.join(__dirname, '../dist');
-app.use(express.static( 'assets'));
+app.use(express.static('static'));
 
 // Home route.
 router.get('/', (req, res) => {
