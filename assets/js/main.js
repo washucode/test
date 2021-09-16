@@ -84,7 +84,7 @@
 
   let selectNav = select('.navbar')
   // let selectNav2 = select('.navbar2')
-  let section2 = select("#two").offsetTop
+  let section2 = select("#two").offsetTop-200
   let section3 = select("#three").offsetTop-100 
   console.log(section3)
   if (selectNav) {
