@@ -5,7 +5,7 @@
   "main":"functions/server.js",
   "scripts": {
     "build": "netlify-lambda build express",
-    "start": "netlify-lambda serve functions",
+    "start": "nodemon app.js",
     "pug": "node node_modules/pug-cli/index.js views/ --out ./"
   },
   "dependencies": {
