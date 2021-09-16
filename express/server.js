@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const router = express.Router();
 
 // Link to views folder.
-let views = path.join(__dirname, '../');
+let views = path.join(__dirname, '../dist');
 app.use(express.static( 'assets'));
 
 // Home route.

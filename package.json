@@ -6,7 +6,7 @@
   "scripts": {
     "build": "netlify-lambda build express",
     "start": "nodemon app.js",
-    "pug": "node node_modules/pug-cli/index.js views/ --out ./"
+    "pug": "node node_modules/pug-cli/index.js views/ --out ./dist"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
