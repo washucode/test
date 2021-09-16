@@ -2,7 +2,7 @@
   "name": "bitlipaweb",
   "version": "0.0.0",
   "private": true,
-  "main":"functions/server.js",
+  "main": "functions/server.js",
   "scripts": {
     "build": "netlify-lambda build express",
     "start": "nodemon app.js",
@@ -16,6 +16,7 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "netlify-lambda": "^2.0.14",
+    "node-static": "^0.7.11",
     "pug-cli": "^1.0.0-alpha6",
     "serverless-http": "^2.7.0"
   }
