@@ -92,14 +92,23 @@
     const scrolled = () => {
       if (window.scrollY >  section2) {
        
+        if (selectNav.classList.contains('navbar-mobile')) {
+
+          selectNav.classList.add( 'nav-scrolled','navbar-mobile-scrolled');
+          
+          
+        }
+        else{
+          selectNav.classList.add( 'nav-scrolled');
+        }
         
-        selectNav.classList.add('nav-scrolled');
+       
         // selectNav2.classList.add('nav-scrolled');
         
       }
       else {
-        selectNav.classList.remove('nav-scrolled');
-        selectNav2.classList.remove('nav-scrolled');
+        selectNav.classList.remove('nav-scrolled', 'navbar-mobile-scrolled');
+        
         
       }
     }
@@ -131,6 +140,7 @@
    */
   on('click', '.mobile-nav-toggle', function(e) {
     select('#navbar').classList.toggle('navbar-mobile')
+    
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
   })
@@ -191,7 +201,27 @@
     aos_init();
   });
 
+  // coin animation
 
+  const slides = document.querySelectorAll('.slide');
+  const slider = document.querySelector('.slider');
+  let activeSlide = 0;
+  
+  slider.addEventListener('animationstart', () => {
+  setInterval(changeSlide, 2000);
+  });
+  
+  function changeSlide() {
+  slides[activeSlide].classList.remove('visible');
+  
+  activeSlide++;
+  
+  if(activeSlide >= slides.length) {
+  activeSlide = 0;
+  }
+  
+  slides[activeSlide].classList.add('visible');
+  }
 
   
 

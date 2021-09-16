@@ -14,7 +14,7 @@ block content
             
     section#two.two.d-flex.align-items-center
       
-      .container
+      .container.too
         
         .row
           .col-lg-4.d-flex.flex-column.justify-content-center
@@ -27,8 +27,14 @@ block content
     section#three.three.d-flex.align-items-center
       .container
         .row
-          .col-lg-7.three-img.justify-content-left(data-aos='zoom-out' data-aos-delay='200')
-            img.img-fluid#home3(src='/img/Home2.svg' alt='')
+          .col-lg-7.three-img.justify-content-left.slider(data-aos='zoom-out' data-aos-delay='200')
+            
+            img.slide.visible.img-fluid#home3(src='/img/bitcoin.svg' alt='')
+            //- .slide
+            //-   img.img-fluid#home3(src='/img/tether-coin.svg' alt='')
+            //- .slide
+            //-   img.img-fluid#home3(src='/img/ethereum.svg' alt='')
+           
           .col-lg-5.d-flex.flex-column.justify-content-center
             h1(data-aos='fade-up')  Multiple Currencies
             h2(data-aos='fade-up' data-aos-delay='400') Send, receive and store your assets in different wallets for easy access and use.
