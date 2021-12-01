@@ -58,14 +58,15 @@ header#header.header.fixed-top
         //-   a.scrollto(href='/') Help
         //- li
         //-   a.scrollto(href='/') Resources
+        
         li.dropdown
           a.scrollto.dropdown-toggle(href='/')
             img.rounded-circle(src='https://cdn0.iconfinder.com/data/icons/user-pictures/100/male-512.png' alt='Generic placeholder image' style='max-width:30px')
             span.profilename.text-muted 
-              | #{user.username}
+              | #{user? user.username}
 
           .dropdown-content
-            a(href=`/profile/${user._id}`) Profile 
+            a(href=`/profile/${user || user._id}`) Profile 
             a(href="/logout") Logout   
             
         //- li
