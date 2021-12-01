@@ -8,9 +8,9 @@ block content
             
                 .profileCn
                     h1
-                        | Hello #{user.username}
+                        | Hello #{user?user.username:"admin"}
                         small This is your profile page. You can choose to edit your information below
-                    form(action=`/updateadmin/${user._id}` method='post' enctype="multipart/form-data")
+                    form(action=`/updateadmin/${user?user._id:""}` method='post' enctype="multipart/form-data")
                         .form-group
                             .avatar-upload
                                 .avatar-edit
@@ -34,11 +34,11 @@ block content
                                                     .col-lg-6
                                                         .form-group.focused
                                                             label.form-control-label(for='input-username') Username
-                                                            input#input-username.form-control.form-control-alternative(type='text' name = 'username' placeholder='Username' value= user.username)
+                                                            input#input-username.form-control.form-control-alternative(type='text' name = 'username' placeholder='Username' value= user?user.username:"")
                                                     .col-lg-6
                                                         .form-group
                                                             label.form-control-label(for='input-email') Email address
-                                                            input#input-email.form-control.form-control-alternative(type='email' name ='email' placeholder= 'email' value = user.email)
+                                                            input#input-email.form-control.form-control-alternative(type='email' name ='email' placeholder= 'email' value = user?user.email:"")
                                                 
                                                 hr.my-4
 
