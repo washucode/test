@@ -1,0 +1,59 @@
+extends adminlay
+
+block content
+    
+    .profilepage
+        .container.pt-5.mt-5 
+            .row
+            
+                .profileCn
+                    h1
+                        | Hello #{user.username}
+                        small This is your profile page. You can choose to edit your information below
+                    form(action=`/updateadmin/${user._id}` method='post' enctype="multipart/form-data")
+                        .form-group
+                            .avatar-upload
+                                .avatar-edit
+                                    input#imageUpload(type='file' accept='.png, .jpg, .jpeg' name='profilepic')
+                                    label#imagelabel(for='imageUpload')
+                                        i#profilecam(data-wenk="Update Your profile Image" data-wenk-pos="bottom").bx.bx-camera
+                                .avatar-preview
+                                    #imagePreview
+                        .row
+                            .col-xl-2
+                            .col-xl-8
+                                .card
+                                    .card-header.bg-white.border-0
+                                    
+                                    
+                                    .card-body
+                                       
+                                            h6.heading-small.text-muted.mb-4 User information
+                                            .pl-lg-4
+                                                .row
+                                                    .col-lg-6
+                                                        .form-group.focused
+                                                            label.form-control-label(for='input-username') Username
+                                                            input#input-username.form-control.form-control-alternative(type='text' name = 'username' placeholder='Username' value= user.username)
+                                                    .col-lg-6
+                                                        .form-group
+                                                            label.form-control-label(for='input-email') Email address
+                                                            input#input-email.form-control.form-control-alternative(type='email' name ='email' placeholder= 'email' value = user.email)
+                                                
+                                                hr.my-4
+
+                                                
+                                                input.btn.btn-md.btn-secondary(type='submit' value="Save")
+                                        
+                            .col-xl-2
+
+                        //- .row#details 
+                        //-     .col-md-2 
+                        //-     .col-md-8         
+                        //-         .form-group.form-group-lg
+                        //-             input.form-control(placeholder='Username' name= "username" type='text' autofocus='{true}' )
+                        //-         .form-group.form-group-lg.mt-5 
+                        //-             input.form-control(placeholder='Email' name= "email" type='text' autofocus='{true}' )
+                        //-     .col-md-2
+                        //-     .btnsm                            
+                        //-         input.mt-5.btn.writeSubmit(type='submit' value="Publish")  

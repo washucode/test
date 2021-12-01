@@ -1,0 +1,28 @@
+extends plainlay
+
+block content
+
+    .login.align-items-center.py-5.py-md-0
+        .container.mt-5
+            .card.login-card.mt-5
+                .row.no-gutters
+                    .col-md-3
+                    .col-md-6
+                        .card-body
+                            .brand-wrapper.text-center.mb-2
+                                img.logo(src='/img/logo.svg' alt='logo')
+                            h2.login-card-description.text-center.mb-2 Welcome back
+                            form(action='/loggin' method="POST")
+                                .form-group.mb-4
+                                    label.sr-only(for='username') UserName
+                                    input#password.form-control(type='text' name='username' placeholder='JohnDoe')
+                                .form-group.mb-4
+                                    label.sr-only(for='email') Email
+                                    input#email.form-control(type='email' name='email' placeholder='Email address')
+                                .form-group.mb-4
+                                    label.sr-only(for='password') Password
+                                    input#password.form-control(type='password' name='password' placeholder='***********')
+                                
+                                    input#login.btn-sm.btn-primary.login-btn.mb-4.mt-2.text-center(type='submit' value='Login')
+                            
+                    .col-md-3

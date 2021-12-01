@@ -1,0 +1,48 @@
+extends adminlay
+
+block content
+
+    section.formWrite.two
+        .container.write.pt-5.mt-5
+            .row 
+                .col-md-2
+                .col-md-8
+
+                    form.writeForm(action='/post/create' method="POST" enctype="multipart/form-data")
+
+                        .writeFormGroup.form-group
+                            input.writeInput(placeholder='Title' name= "title" type='text' autofocus='{true}' )
+                        .writeFormGroup.form-group.mb-3
+                            input.writeInput.subtitle(placeholder='Subtitle' name= "subtitle" type='text' autofocus='{true}'  )
+                        .writeFormGroup.form-group.con-tooltip
+                            .row 
+                                .col-md-2
+                                .col-md-8
+                                    #image-preview
+                                        label#image-label(for='fileInput'  )
+                                            i(data-wenk="Upload Feature Image" data-wenk-pos="bottom").writeIcon.bx.bx-camera
+                                        input.image-upload#fileInput(type='file' style="display:none;" name= "prevImage" ).mr-5
+                                .col-md-2
+                        .writeFormGroup.form-group.three.mt-5
+                            textarea#summernote.writeInput.writeText(placeholder='Tell your story...' type='text' name="content" autofocus='{true}')
+                       
+                        .writeFormGroup.form-group.mt-5(data-wenk="Add tags(upto 5) to help with SEO. Use Enter after typing to add the tag and backspace to delete a tag" data-wenk-pos="top" )
+                            input(placeholder='Add Tags' type="text" data-role='tagsinput' name="posttags"  )
+                        
+                        .btnsm                            
+                            input.mt-5.btn.writeSubmit(type='submit' value="Publish")  
+                        
+                           
+
+                            a.mt-5.btn-lg.writeSubmit(type='submit' style="float:right" action="/preview" method="post")
+                                | Preview
+                            
+                
+
+                      
+                            
+                            
+               
+
+
+

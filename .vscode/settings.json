@@ -1,0 +1,13 @@
+{
+    "emmet.showSuggestionsAsSnippets": true,
+    "files.associations": {
+        "*html": "html", 
+        "*njk": "html"
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "vue-html": "html",
+        "razor": "html",
+        "plaintext": "jade"
+    }
+}
