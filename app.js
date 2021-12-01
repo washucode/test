@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 app.use(logger('dev'));
 // const fileUpload = require("express-fileupload");
 app.use(cookieParser());
-app.use(express.static( 'assets'));
+app.use(express.static( 'public'));
 // app.use(multer({ dest: './assets/posts'}))
 
 //call routes in

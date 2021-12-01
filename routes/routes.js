@@ -22,7 +22,7 @@ module.exports= function(passport){
   var mypassport=require('../passport/login')
   mypassport(passport)
   var multer = require('multer')
-  const upload = multer({ dest: './assets/posts/'})
+  const upload = multer({ dest: './public/posts/'})
 
   router
     .post("/post/create",upload.single('prevImage'),PostController.createNewPost

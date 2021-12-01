@@ -11,7 +11,7 @@ let views = path.join(__dirname, '../dist');
 
 // link to blog views
 
-app.use(express.static('assets'));
+app.use(express.static('public'));
 
 // Home route.
 router.get('/', (req, res) => {
